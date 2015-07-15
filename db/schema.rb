@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715120212) do
+ActiveRecord::Schema.define(version: 20150715131629) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.text     "about"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transits", force: :cascade do |t|
+    t.string   "mode"
+    t.integer  "distance"
+    t.integer  "co_output"
+    t.integer  "passengers"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "volunteer_id"
+  end
+
+  add_index "transits", ["volunteer_id"], name: "index_transits_on_volunteer_id"
 
   create_table "volunteers", force: :cascade do |t|
     t.string   "name"
@@ -23,6 +44,11 @@ ActiveRecord::Schema.define(version: 20150715120212) do
     t.integer  "rand_offset"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "event_id"
+    t.integer  "transit_id"
   end
+
+  add_index "volunteers", ["event_id"], name: "index_volunteers_on_event_id"
+  add_index "volunteers", ["transit_id"], name: "index_volunteers_on_transit_id"
 
 end

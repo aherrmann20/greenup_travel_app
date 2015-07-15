@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mode: MyString
+  distance: 1
+  co_output: 1
+  passengers: 1
+
+two:
+  mode: MyString
+  distance: 1
+  co_output: 1
+  passengers: 1

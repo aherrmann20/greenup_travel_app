@@ -8,7 +8,7 @@ class VolunteersController < ApplicationController
 		@volunteer = Volunteer.new(volunteer_params)
 
 		if @volunteer.save
-			redirect_to volunteer_path(@volunteer)
+			redirect_to new_transit_path
 		else
 			render 'new'
 		end
