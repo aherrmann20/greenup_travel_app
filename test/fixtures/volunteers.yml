@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  surname: MyString
+  email: MyString
+  gender: MyString
+  co_weight: 1
+  tree_offset: 1
+  rand_offset: 1
+
+two:
+  name: MyString
+  surname: MyString
+  email: MyString
+  gender: MyString
+  co_weight: 1
+  tree_offset: 1
+  rand_offset: 1
